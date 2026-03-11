@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_31b19aea63c62b69b2008e045d807889 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_31b19aea63c62b69b2008e045d807889" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_31b19aea63c62b69b2008e045d807889 = L.map(
+                "map_31b19aea63c62b69b2008e045d807889",
+                {
+                    center: [42.024514504197526, -75.11175077320988],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ea9b9e20c05ca5ab32b943c97ba4f783 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ea9b9e20c05ca5ab32b943c97ba4f783.addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+            var circle_marker_6331e252b33b020692185cba599194ac = L.circleMarker(
+                [42.37138889, -74.66888889],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_072a9cc8548aa726112525ad58eaaf18 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_763ffbe256c39be57dcca1e324e966b1 = $(`<div id="html_763ffbe256c39be57dcca1e324e966b1" style="width: 100.0%; height: 100.0%;">WEST BRANCH DELAWARE RIVER AT HOBART NY<br>ID: 1421610</div>`)[0];
+                popup_072a9cc8548aa726112525ad58eaaf18.setContent(html_763ffbe256c39be57dcca1e324e966b1);
+            
+        
+
+        circle_marker_6331e252b33b020692185cba599194ac.bindPopup(popup_072a9cc8548aa726112525ad58eaaf18)
+        ;
+
+        
+    
+    
+            circle_marker_6331e252b33b020692185cba599194ac.bindTooltip(
+                `<div>
+                     WEST BRANCH DELAWARE RIVER AT HOBART NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7ba2256484b9f5817abfefff2bbfdc2 = L.circleMarker(
+                [42.3611111, -74.6622222],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_4ffce587846442e38d0a252fd8eb7e1e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4bea85535b134502141ba525e53cf005 = $(`<div id="html_4bea85535b134502141ba525e53cf005" style="width: 100.0%; height: 100.0%;">TOWN BROOK SOUTHEAST OF HOBART NY<br>ID: 1421618</div>`)[0];
+                popup_4ffce587846442e38d0a252fd8eb7e1e.setContent(html_4bea85535b134502141ba525e53cf005);
+            
+        
+
+        circle_marker_e7ba2256484b9f5817abfefff2bbfdc2.bindPopup(popup_4ffce587846442e38d0a252fd8eb7e1e)
+        ;
+
+        
+    
+    
+            circle_marker_e7ba2256484b9f5817abfefff2bbfdc2.bindTooltip(
+                `<div>
+                     TOWN BROOK SOUTHEAST OF HOBART NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dd1df93061607f27bf4f364abbc3f071 = L.circleMarker(
+                [42.28027778, -74.9072222],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_cd87bbac46b31a8443113eff4b67804d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16a55d60658378c808e0c892fa36a552 = $(`<div id="html_16a55d60658378c808e0c892fa36a552" style="width: 100.0%; height: 100.0%;">WEST BRANCH DELAWARE RIVER UPSTREAM FROM DELHI NY<br>ID: 1421900</div>`)[0];
+                popup_cd87bbac46b31a8443113eff4b67804d.setContent(html_16a55d60658378c808e0c892fa36a552);
+            
+        
+
+        circle_marker_dd1df93061607f27bf4f364abbc3f071.bindPopup(popup_cd87bbac46b31a8443113eff4b67804d)
+        ;
+
+        
+    
+    
+            circle_marker_dd1df93061607f27bf4f364abbc3f071.bindTooltip(
+                `<div>
+                     WEST BRANCH DELAWARE RIVER UPSTREAM FROM DELHI NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_814d99130dccfd5f9979759996ee5efd = L.circleMarker(
+                [42.25238889, -74.9010556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_bf967547c0e205ca7e63f5b795256067 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a102ddbff7fc9e32eaa4c3121271ddb = $(`<div id="html_2a102ddbff7fc9e32eaa4c3121271ddb" style="width: 100.0%; height: 100.0%;">LITTLE DELAWARE RIVER NEAR DELHI NY<br>ID: 1422500</div>`)[0];
+                popup_bf967547c0e205ca7e63f5b795256067.setContent(html_2a102ddbff7fc9e32eaa4c3121271ddb);
+            
+        
+
+        circle_marker_814d99130dccfd5f9979759996ee5efd.bindPopup(popup_bf967547c0e205ca7e63f5b795256067)
+        ;
+
+        
+    
+    
+            circle_marker_814d99130dccfd5f9979759996ee5efd.bindTooltip(
+                `<div>
+                     LITTLE DELAWARE RIVER NEAR DELHI NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f980dda2649c698fd8fe98b6d78ddfa7 = L.circleMarker(
+                [42.17266667, -75.1219167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_0b9e63ec89678fe53f2f845779a5699c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dfac8c069e36d58fa4964b97125d1446 = $(`<div id="html_dfac8c069e36d58fa4964b97125d1446" style="width: 100.0%; height: 100.0%;">EAST BROOK EAST OF WALTON NY<br>ID: 1422747</div>`)[0];
+                popup_0b9e63ec89678fe53f2f845779a5699c.setContent(html_dfac8c069e36d58fa4964b97125d1446);
+            
+        
+
+        circle_marker_f980dda2649c698fd8fe98b6d78ddfa7.bindPopup(popup_0b9e63ec89678fe53f2f845779a5699c)
+        ;
+
+        
+    
+    
+            circle_marker_f980dda2649c698fd8fe98b6d78ddfa7.bindTooltip(
+                `<div>
+                     EAST BROOK EAST OF WALTON NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2cd9dea1ae45350ec48b565341e6c5d5 = L.circleMarker(
+                [42.1661111, -75.14002778],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_03217113966bbf6b0bd1748e0acf531d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69e3c35aa99e6b9e5900aacdcb121c0b = $(`<div id="html_69e3c35aa99e6b9e5900aacdcb121c0b" style="width: 100.0%; height: 100.0%;">WEST BRANCH DELAWARE RIVER AT WALTON NY<br>ID: 1423000</div>`)[0];
+                popup_03217113966bbf6b0bd1748e0acf531d.setContent(html_69e3c35aa99e6b9e5900aacdcb121c0b);
+            
+        
+
+        circle_marker_2cd9dea1ae45350ec48b565341e6c5d5.bindPopup(popup_03217113966bbf6b0bd1748e0acf531d)
+        ;
+
+        
+    
+    
+            circle_marker_2cd9dea1ae45350ec48b565341e6c5d5.bindTooltip(
+                `<div>
+                     WEST BRANCH DELAWARE RIVER AT WALTON NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5f86fd81c19a77f1cf3b3a90b0a92b63 = L.circleMarker(
+                [42.1735833, -75.2794444],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_4abdc167b9c3e087b42d96da86aab291 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b1ba2f26d1c6298c70907e7c7277403a = $(`<div id="html_b1ba2f26d1c6298c70907e7c7277403a" style="width: 100.0%; height: 100.0%;">TROUT CREEK NEAR TROUT CREEK NY<br>ID: 142400103</div>`)[0];
+                popup_4abdc167b9c3e087b42d96da86aab291.setContent(html_b1ba2f26d1c6298c70907e7c7277403a);
+            
+        
+
+        circle_marker_5f86fd81c19a77f1cf3b3a90b0a92b63.bindPopup(popup_4abdc167b9c3e087b42d96da86aab291)
+        ;
+
+        
+    
+    
+            circle_marker_5f86fd81c19a77f1cf3b3a90b0a92b63.bindTooltip(
+                `<div>
+                     TROUT CREEK NEAR TROUT CREEK NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f8b66cde92b08c42f76b09443e47b1ac = L.circleMarker(
+                [42.07491667, -75.3958056],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_4c1b04a1b824e5e718a187c0cee4abb0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1409c46832814cb434f4476b4e0ae11 = $(`<div id="html_a1409c46832814cb434f4476b4e0ae11" style="width: 100.0%; height: 100.0%;">WEST BRANCH DELAWARE RIVER AT STILESVILLE NY<br>ID: 1425000</div>`)[0];
+                popup_4c1b04a1b824e5e718a187c0cee4abb0.setContent(html_a1409c46832814cb434f4476b4e0ae11);
+            
+        
+
+        circle_marker_f8b66cde92b08c42f76b09443e47b1ac.bindPopup(popup_4c1b04a1b824e5e718a187c0cee4abb0)
+        ;
+
+        
+    
+    
+            circle_marker_f8b66cde92b08c42f76b09443e47b1ac.bindTooltip(
+                `<div>
+                     WEST BRANCH DELAWARE RIVER AT STILESVILLE NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b28b91f4a83757c25b7b1eeaa15071e3 = L.circleMarker(
+                [42.00302778, -75.38352778],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_bce27e5598456735a739208ab18d5946 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27c4552a9dee51185eacc73a874a415b = $(`<div id="html_27c4552a9dee51185eacc73a874a415b" style="width: 100.0%; height: 100.0%;">WEST BRANCH DELAWARE RIVER AT HALE EDDY NY<br>ID: 1426500</div>`)[0];
+                popup_bce27e5598456735a739208ab18d5946.setContent(html_27c4552a9dee51185eacc73a874a415b);
+            
+        
+
+        circle_marker_b28b91f4a83757c25b7b1eeaa15071e3.bindPopup(popup_bce27e5598456735a739208ab18d5946)
+        ;
+
+        
+    
+    
+            circle_marker_b28b91f4a83757c25b7b1eeaa15071e3.bindTooltip(
+                `<div>
+                     WEST BRANCH DELAWARE RIVER AT HALE EDDY NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0d867fced440da406a894dffb9f0af70 = L.circleMarker(
+                [41.86727778, -75.21375],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_cb559afd72432cc8c2b4ca09aa8e64e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6fae3071d80f00a4f8f652b3fd725535 = $(`<div id="html_6fae3071d80f00a4f8f652b3fd725535" style="width: 100.0%; height: 100.0%;">DELAWARE RIVER AT LORDVILLE NY<br>ID: 1427207</div>`)[0];
+                popup_cb559afd72432cc8c2b4ca09aa8e64e6.setContent(html_6fae3071d80f00a4f8f652b3fd725535);
+            
+        
+
+        circle_marker_0d867fced440da406a894dffb9f0af70.bindPopup(popup_cb559afd72432cc8c2b4ca09aa8e64e6)
+        ;
+
+        
+    
+    
+            circle_marker_0d867fced440da406a894dffb9f0af70.bindTooltip(
+                `<div>
+                     DELAWARE RIVER AT LORDVILLE NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_93c54c47f243acf38fa3bfce68d71a82 = L.circleMarker(
+                [41.76055556, -75.04838889],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_24d712c666967f3cdd7ff041f8b804f2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8921a67b19fddd7b7c4ae90ab5397a3 = $(`<div id="html_b8921a67b19fddd7b7c4ae90ab5397a3" style="width: 100.0%; height: 100.0%;">CALLICOON CREEK AT CALLICOON NY<br>ID: 1427500</div>`)[0];
+                popup_24d712c666967f3cdd7ff041f8b804f2.setContent(html_b8921a67b19fddd7b7c4ae90ab5397a3);
+            
+        
+
+        circle_marker_93c54c47f243acf38fa3bfce68d71a82.bindPopup(popup_24d712c666967f3cdd7ff041f8b804f2)
+        ;
+
+        
+    
+    
+            circle_marker_93c54c47f243acf38fa3bfce68d71a82.bindTooltip(
+                `<div>
+                     CALLICOON CREEK AT CALLICOON NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d77a87548e18cc0408584d4fad507024 = L.circleMarker(
+                [41.75675, -75.0574167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_831dca894df07d5ed049768d1f1fc478 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7afe6071f1dcad25ffedebb55d2b32e9 = $(`<div id="html_7afe6071f1dcad25ffedebb55d2b32e9" style="width: 100.0%; height: 100.0%;">DELAWARE RIVER AT CALLICOON NY<br>ID: 1427510</div>`)[0];
+                popup_831dca894df07d5ed049768d1f1fc478.setContent(html_7afe6071f1dcad25ffedebb55d2b32e9);
+            
+        
+
+        circle_marker_d77a87548e18cc0408584d4fad507024.bindPopup(popup_831dca894df07d5ed049768d1f1fc478)
+        ;
+
+        
+    
+    
+            circle_marker_d77a87548e18cc0408584d4fad507024.bindTooltip(
+                `<div>
+                     DELAWARE RIVER AT CALLICOON NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cf95156153c2926debce4b2d260ff23e = L.circleMarker(
+                [41.56388889, -75.0144444],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_d56574ae17b3f325e5c7780d3f5c4aff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c82ec2ad531a1cb18b2283e6d4d05ea = $(`<div id="html_3c82ec2ad531a1cb18b2283e6d4d05ea" style="width: 100.0%; height: 100.0%;">TENMILE RIVER AT TUSTEN NY<br>ID: 1428000</div>`)[0];
+                popup_d56574ae17b3f325e5c7780d3f5c4aff.setContent(html_3c82ec2ad531a1cb18b2283e6d4d05ea);
+            
+        
+
+        circle_marker_cf95156153c2926debce4b2d260ff23e.bindPopup(popup_d56574ae17b3f325e5c7780d3f5c4aff)
+        ;
+
+        
+    
+    
+            circle_marker_cf95156153c2926debce4b2d260ff23e.bindTooltip(
+                `<div>
+                     TENMILE RIVER AT TUSTEN NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c8ba250352c666f668fa491df159828f = L.circleMarker(
+                [41.50875, -74.9860556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_41b6c1bb622aa30139d1e3f8033a1e88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_922e0c91cc79f8893e77fb9c8486dc11 = $(`<div id="html_922e0c91cc79f8893e77fb9c8486dc11" style="width: 100.0%; height: 100.0%;">DELAWARE R ABOVE LACKAWAXEN R NEAR BARRYVILLE NY<br>ID: 1428500</div>`)[0];
+                popup_41b6c1bb622aa30139d1e3f8033a1e88.setContent(html_922e0c91cc79f8893e77fb9c8486dc11);
+            
+        
+
+        circle_marker_c8ba250352c666f668fa491df159828f.bindPopup(popup_41b6c1bb622aa30139d1e3f8033a1e88)
+        ;
+
+        
+    
+    
+            circle_marker_c8ba250352c666f668fa491df159828f.bindTooltip(
+                `<div>
+                     DELAWARE R ABOVE LACKAWAXEN R NEAR BARRYVILLE NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76a82b5b51c2ad6c0454584c9a379593 = L.circleMarker(
+                [42.17738889, -75.1289167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_d2857d45c8e3ea55aa9c4ee8c53db9ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_424201256ee3dceae2d44de303527267 = $(`<div id="html_424201256ee3dceae2d44de303527267" style="width: 100.0%; height: 100.0%;">WEST BROOK AT AUSTIN LINCOLN PARK AT WALTON NY<br>ID: 1422779</div>`)[0];
+                popup_d2857d45c8e3ea55aa9c4ee8c53db9ec.setContent(html_424201256ee3dceae2d44de303527267);
+            
+        
+
+        circle_marker_76a82b5b51c2ad6c0454584c9a379593.bindPopup(popup_d2857d45c8e3ea55aa9c4ee8c53db9ec)
+        ;
+
+        
+    
+    
+            circle_marker_76a82b5b51c2ad6c0454584c9a379593.bindTooltip(
+                `<div>
+                     WEST BROOK AT AUSTIN LINCOLN PARK AT WALTON NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e5b4ac4acda29655aae622fe1f7d8bd = L.circleMarker(
+                [42.04869444, -75.4851944],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_c0439944cb742cf2c85faabed8eeed5e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_abe9f8a4de51d3a4cbdad721500b40f1 = $(`<div id="html_abe9f8a4de51d3a4cbdad721500b40f1" style="width: 100.0%; height: 100.0%;">OQUAGA CREEK AT MCCLURE NY<br>ID: 1425805</div>`)[0];
+                popup_c0439944cb742cf2c85faabed8eeed5e.setContent(html_abe9f8a4de51d3a4cbdad721500b40f1);
+            
+        
+
+        circle_marker_1e5b4ac4acda29655aae622fe1f7d8bd.bindPopup(popup_c0439944cb742cf2c85faabed8eeed5e)
+        ;
+
+        
+    
+    
+            circle_marker_1e5b4ac4acda29655aae622fe1f7d8bd.bindTooltip(
+                `<div>
+                     OQUAGA CREEK AT MCCLURE NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5a5514d1533d19a316c39af5d28818ae = L.circleMarker(
+                [41.84027778, -75.2383333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_ca36392e949bbc5c21dd0f26a77a35dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a1a474a4b40bdce08bc1898c9511f75 = $(`<div id="html_0a1a474a4b40bdce08bc1898c9511f75" style="width: 100.0%; height: 100.0%;">Equinunk Creek near Dillontown, PA<br>ID: 1427195</div>`)[0];
+                popup_ca36392e949bbc5c21dd0f26a77a35dd.setContent(html_0a1a474a4b40bdce08bc1898c9511f75);
+            
+        
+
+        circle_marker_5a5514d1533d19a316c39af5d28818ae.bindPopup(popup_ca36392e949bbc5c21dd0f26a77a35dd)
+        ;
+
+        
+    
+    
+            circle_marker_5a5514d1533d19a316c39af5d28818ae.bindTooltip(
+                `<div>
+                     Equinunk Creek near Dillontown, PA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_31d424197be4cabd22fcaa99c55b3823 = L.circleMarker(
+                [42.06220555555555, -75.37890277777777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_31b19aea63c62b69b2008e045d807889);
+        
+    
+        var popup_5fbf8868c7a8b6d31c78cc933f051244 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77392ea09f664cd46712eb66f2de5ff0 = $(`<div id="html_77392ea09f664cd46712eb66f2de5ff0" style="width: 100.0%; height: 100.0%;">CANNONSVILLE RES RELEASE CHANNEL NR STILESVILLE NY<br>ID: 1424998</div>`)[0];
+                popup_5fbf8868c7a8b6d31c78cc933f051244.setContent(html_77392ea09f664cd46712eb66f2de5ff0);
+            
+        
+
+        circle_marker_31d424197be4cabd22fcaa99c55b3823.bindPopup(popup_5fbf8868c7a8b6d31c78cc933f051244)
+        ;
+
+        
+    
+    
+            circle_marker_31d424197be4cabd22fcaa99c55b3823.bindTooltip(
+                `<div>
+                     CANNONSVILLE RES RELEASE CHANNEL NR STILESVILLE NY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
