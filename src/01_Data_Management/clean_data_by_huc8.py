@@ -21,40 +21,41 @@ date_end = "2022-09-30"
 ####################################
 
 df = pd.read_csv(os.path.join(DATA_RAW_DIR, "streamflow_wy2022.csv"))
-df_metadata = pd.read_csv(os.path.join(DATA_RAW_DIR, "streamflow_wy2022_metadata.csv"))
+df_metadata = pd.read_csv(os.path.join(DATA_RAW_DIR, "streamflow_wy2022_metadata.csv"), dtype={"site_id": str, "huc8": str})
+# Combined metadata for all HUCs
+df_metadata_all = df_metadata[df_metadata["huc8"].isin(HUC_IDs)]
+df_metadata_all.to_csv(os.path.join(DATA_CLEAN_DIR, "streamflow_wy2022_metadata_all.csv"), index=False)
 
-for HUC_ID in HUC_IDs:
-    df_metadata_cleaned = df_metadata[df_metadata["huc8"] == int(HUC_ID)]
-    valid_sites = set(df_metadata_cleaned["site_id"])
-    df_cleaned = df[["date"] + [col for col in df.columns if col != "date" and int(col) in valid_sites]]
+valid_sites = set(df_metadata_all["site_id"])
+df_all = df[["date"] + [col for col in df.columns if col != "date" and col in valid_sites]]
+df_all.to_csv(os.path.join(DATA_CLEAN_DIR, f"streamflow_wy2022.csv"), index=False)
 
-    df_cleaned.to_csv(os.path.join(DATA_CLEAN_DIR, f"streamflow_wy2022_{HUC_ID}.csv"), index=False)
-    df_metadata_cleaned.to_csv(os.path.join(DATA_CLEAN_DIR, f"streamflow_wy2022_metadata_{HUC_ID}.csv"), index=False)
-
-    expected = 365
-    for col in df_cleaned.columns[1:]:                                                                         
-        n = df_cleaned[col].notna().sum()
-        if n < expected:
-            print(f"{col}: {n}/{expected} ({expected - n} missing)")
+expected = 365
+for col in df_all.columns[1:]:
+    n = df_all[col].notna().sum()
+    if n < expected:
+        print(f"{col}: {n}/{expected} ({expected - n} missing)")
 
 ####################################
 ##### Clean precipitation data #####    
 ####################################
 
+precip_dict = {}
+df_metadata_cleaned = pd.read_csv(os.path.join(DATA_CLEAN_DIR, f"streamflow_wy2022_metadata_all.csv"), dtype={"site_id": str, "huc8": str})                                    
+
 for HUC_ID in HUC_IDs:
 
     precip = np.load(os.path.join(DATA_RAW_DIR, f"precipitation_wy2022_{HUC_ID}.npy"))  # shape: (days, j, i)   
     print("precip shape = ", precip.shape)     
-    
-    df_metadata_cleaned = pd.read_csv(os.path.join(DATA_CLEAN_DIR, f"streamflow_wy2022_metadata_{HUC_ID}.csv"))                                      
+
+    if "date" not in precip_dict:
+        precip_dict["date"] = pd.date_range(start=date_start, periods=precip.shape[0], freq="D")
+
                                                                                                                                                 
     ij_huc_bounds, _ = st.define_huc_domain(hucs=[HUC_ID], grid="conus2")
     imin, jmin = ij_huc_bounds[0], ij_huc_bounds[1]
 
-    dates = pd.date_range(start=date_start, periods=precip.shape[0], freq="D")
-
-    precip_dict = {"date": dates}
-    for _, row in df_metadata_cleaned.iterrows():
+    for _, row in df_metadata_cleaned[df_metadata_cleaned["huc8"] == HUC_ID].iterrows():
         site_id = row["site_id"]
         if pd.isna(row["conus2_i"]) or pd.isna(row["conus2_j"]):
             i_lat = row["latitude"]
@@ -70,6 +71,6 @@ for HUC_ID in HUC_IDs:
         print(f"site_id: {site_id}, local_i: {local_i}, local_j: {local_j}, row[conus2_i]: {row['conus2_i']}, row[conus2_j]: {row['conus2_j']}, imin: {imin}, jmin: {jmin}")
         
 
-    df_precip = pd.DataFrame(precip_dict)
-    df_precip.to_csv(os.path.join(DATA_CLEAN_DIR, f"precipitation_wy2022_{HUC_ID}.csv"), index=False)
-    print(f"Saved precipitation CSV with shape {df_precip.shape}")
+df_precip = pd.DataFrame(precip_dict)
+df_precip.to_csv(os.path.join(DATA_CLEAN_DIR, f"precipitation_wy2022.csv"), index=False)
+print(f"Saved precipitation CSV with shape {df_precip.shape}")
