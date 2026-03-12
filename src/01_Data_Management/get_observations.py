@@ -102,23 +102,23 @@ resolution = "daily"
 aggregation = "sum"
 date_start = "2021-10-01"
 date_end = "2022-09-30"
-huc_id = "02040101"
+huc_ids = ["02040101", "02040102"]
 print(hf.get_citations(dataset=dataset))
 
+for huc_id in huc_ids:
+    ij_huc_bounds, sub_mask = st.define_huc_domain(hucs=[huc_id], grid="conus2")
+    print(f"ij_huc_bounds: {ij_huc_bounds}")
 
-ij_huc_bounds, sub_mask = st.define_huc_domain(hucs=[huc_id], grid="conus2")
-print(f"ij_huc_bounds: {ij_huc_bounds}")
+    precip = hf.gridded.get_gridded_data(
+        dataset=dataset,
+        variable=variable,
+        temporal_resolution=resolution,
+        grid = "conus2",
+        aggregation=aggregation,
+        date_start=date_start,
+        date_end=date_end,
+        huc_id = huc_id
+    )
 
-precip = hf.gridded.get_gridded_data(
-    dataset=dataset,
-    variable=variable,
-    temporal_resolution=resolution,
-    grid = "conus2",
-    aggregation=aggregation,
-    date_start=date_start,
-    date_end=date_end,
-    huc_id = huc_id
-)
-
-print(f"Downloaded {precip.shape[0]} rows of {variable} data and {precip.shape[1]} columns.")
-np.save(os.path.join(DATA_DIR, f"{variable}_wy2022_{huc_id}"), precip)
+    print(f"Downloaded {precip.shape[0]} rows of {variable} data and {precip.shape[1]} columns.")
+    np.save(os.path.join(DATA_DIR, f"{variable}_wy2022_{huc_id}"), precip)
