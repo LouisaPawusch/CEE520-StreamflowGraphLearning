@@ -3,3 +3,12 @@
 data/raw/shapes/
 *.csv
 *.npy
+*-checkpoint.ipynb
+*.ipynb_checkpoints/
+*.pt
+*.log
+*.html
+*.slurm
+*.err
+*.out
+*.png
