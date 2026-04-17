@@ -12,3 +12,4 @@ data/raw/shapes/
 *.err
 *.out
 *.png
+*.ckpt
